@@ -91,3 +91,20 @@ engine.setProperty('voice', voices[1].id)  # महिला आवाज़
 engine.say("Hello, I am a female voice. This is an example of pyttsx3.")
 engine.runAndWait()
 
+
+
+#Python में engine एक वेरिएबल है जिसे आप pyttsx3.init() के रिटर्न ऑब्जेक्ट के लिए उपयोग कर रहे हैं। आप इसे अपनी सुविधा और समझ के अनुसार कोई भी नाम दे सकते हैं। वेरिएबल का नाम बदलने से कोड पर कोई असर नहीं पड़ता, जब तक आप हर जगह इसे सही नाम से उपयोग करते हैं।
+
+#उदाहरण के लिए, आप engine की जगह ये नाम उपयोग कर सकते हैं:
+
+
+#---
+
+#दूसरा नाम उपयोग करना
+
+#import pyttsx3
+
+#speech_engine = pyttsx3.init()  # 'engine' की जगह 'speech_engine' उपयोग किया
+#speech_engine.say("This is a custom name for the engine.")
+#speech_engine.runAndWait()
+
