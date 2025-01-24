@@ -28,7 +28,12 @@ print(letter.format(name="Suresh", date="24 September 2050"))
 
 
 
+letter = "Hello, {user_name}! Welcome to {place}."
 
+# कस्टम प्लेसहोल्डर्स को बदलें
+letter = letter.format(user_name="Suresh", place="Python World")
+
+print(letter)
 
 
 #This is for sefty parpach 
