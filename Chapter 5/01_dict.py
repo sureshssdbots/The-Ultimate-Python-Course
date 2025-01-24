@@ -1,90 +1,89 @@
-# Creating an empty dictionary
 d = {}  # Empty dictionary
 print(type(d))  # Prints: <class 'dict'>
 
-# Creating a dictionary with some data
+# Dictionary with initial data
 marks = {
     "Suresh": 100,
     "Shubham": 56,
     "Sohan": 23
 }
 
-# Accessing elements
-print(marks["Suresh"])  # Access value for key "Suresh"
+# Accessing a value using a key
+print(marks["Suresh"])  # Output: 100
 
-# Safely accessing elements using get() (avoids KeyError)
-print(marks.get("Harry", "Key not found"))  # Outputs: Key not found
+# Using get() method to safely access a value
+print(marks.get("Suresh", 'Key not found'))  # Output: 100
 
-# Adding a new key-value pair
-marks["Harry"] = 78  # Adds 'Harry' with value 78
-print(marks)  # Prints updated dictionary
+# Adding a new key-value pair to the dictionary
+marks['Bhawana'] = 99
+print(marks)  # Output: {'Suresh': 100, 'Shubham': 56, 'Sohan': 23, 'Bhawana': 99}
 
-# Updating an existing key's value
-marks["Suresh"] = 95  # Updates value for key 'Suresh'
-print(marks)  # Prints updated dictionary
+# Adding another key-value pair
+marks['Dilip'] = 98
+print(marks)  # Output: {'Suresh': 100, 'Shubham': 56, 'Sohan': 23, 'Bhawana': 99, 'Dilip': 98}
 
-# Removing an element using pop()
-removed_value = marks.pop("Sohan")  # Removes 'Sohan' and returns its value
-print(f"Removed value: {removed_value}")  # Outputs: 23
-print(marks)  # Updated dictionary after removal
-
-# Removing the last inserted item using popitem()
-last_removed = marks.popitem()  # Removes the last inserted key-value pair
-print(f"Last removed item: {last_removed}")  # Outputs: ('Harry', 78)
-print(marks)  # Updated dictionary
-
-# Adding multiple key-value pairs using update()
-marks.update({"Amit": 88, "Raj": 65})  # Adds new key-value pairs
-print(marks)  # Prints updated dictionary
-
-# Clearing the dictionary (removes all elements)
-marks.clear()
-print(marks)  # Outputs: {}
-
-# Recreating dictionary for further operations
-marks = {
-    "Suresh": 100,
-    "Shubham": 56,
-    "Sohan": 23
-}
-
-# Checking if a key exists using 'in' operator
-if "Suresh" in marks:
-    print("Suresh is in the dictionary")
-
-# Iterating through keys
-print("Keys in the dictionary:")
-for key in marks.keys():
-    print(key)  # Prints each key
-
-# Iterating through values
-print("Values in the dictionary:")
-for value in marks.values():
-    print(value)  # Prints each value
-
-# Iterating through key-value pairs
-print("Key-Value pairs in the dictionary:")
-for key, value in marks.items():
-    print(f"{key}: {value}")  # Prints each key-value pair
-
-# Copying the dictionary
-new_marks = marks.copy()  # Creates a copy of the dictionary
-print("Copied dictionary:", new_marks)
-
-# Getting the length of the dictionary
-print("Length of dictionary:", len(marks))  # Outputs: 3 (number of key-value pairs)
+# Accessing the newly added key
+print(marks['Dilip'])  # Output: 98
 
 # Deleting a key-value pair using del
-del marks["Shubham"]  # Deletes the key 'Shubham'
-print(marks)  # Updated dictionary
+del marks['Shubham']
+print(marks)  # Output: {'Suresh': 100, 'Sohan': 23, 'Bhawana': 99, 'Dilip': 98}
 
-# Nested dictionary example
+# Removing a key-value pair using pop() and storing the removed value
+removed = marks.pop('Sohan')
+print('removed value is', removed)  # Output: removed value is 23
+print(marks)  # Output: {'Suresh': 100, 'Bhawana': 99, 'Dilip': 98}
+
+# Removing the last inserted key-value pair using popitem()
+last_removed = marks.popitem()
+print('the last value is', last_removed)  # Output: the last value is ('Dilip', 98)
+print(marks)  # Output: {'Suresh': 100, 'Bhawana': 99}
+
+# Adding multiple key-value pairs using update()
+marks.update({'Rawi': 88, 'Abhijeet': 85})
+print(marks)  # Output: {'Suresh': 100, 'Bhawana': 99, 'Rawi': 88, 'Abhijeet': 85}
+
+# Checking if a key exists in the dictionary
+if "Suresh" in marks:
+    print("Suresh is in the dictionary")  # Output: Suresh is in the dictionary
+else:
+    print('This key is not in dictionary')
+
+# Iterating through all the keys in the dictionary
+print('Keys in the dictionary:')
+for key in marks.keys():  
+    print(key)  # Prints each key
+
+# Iterating through all the values in the dictionary
+print("Values in the dictionary:")
+for value in marks.values():  
+    print(value)  # Prints each value
+
+# Iterating through all key-value pairs in the dictionary
+print("Key-Value pairs in the dictionary:")
+for key, value in marks.items():
+    print(f"{key}: {value}")  # Prints key-value pairs
+
+# Copying the dictionary to a new dictionary
+new_marks = marks.copy()
+print(new_marks)  # Output: {'Suresh': 100, 'Bhawana': 99, 'Rawi': 88, 'Abhijeet': 85}
+
+# Getting the length of the dictionary
+print('Length of dictionary', len(marks))  # Output: Length of dictionary 4
+
+# Creating and printing a nested dictionary
 nested_dict = {
     "Class1": {"Student1": "Suresh", "Student2": "Amit"},
     "Class2": {"Student1": "Raj", "Student2": "Shubham"}
 }
-print(nested_dict)  # Prints the nested dictionary
-print(nested_dict["Class1"]["Student1"])  # Accessing nested dictionary value
+print(nested_dict)  # Prints the entire nested dictionary
+
+# Accessing a value from the nested dictionary
+print(nested_dict["Class1"]["Student1"])  # Output: Suresh
+
+# Clearing all items from the dictionary
+marks.clear()
+print(marks)  # Output: {}
 
 
 
