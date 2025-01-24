@@ -1,12 +1,60 @@
-friends = ["Apple", "Orange", 5, 345.06, False, "Aakash", "Rohan"]
-print(friends)
-friends.append("Harry")
-print(friends)
+# एक लिस्ट बनाई गई है जिसमें विभिन्न प्रकार के डेटा शामिल हैं
+list = ['suresh', 'dilip', 'rawi', 'bhawana', 7, 22.5, False]
 
-l1 = [1, 34,62, 2, 6, 11]
-# l1.sort()
-# l1.reverse()
-# l1.insert(2, 333333) # Insert 333333 such that its index in the list is 3
-value = l1.pop(3)
-print(value)
-print(l1)
+# लिस्ट को प्रिंट करें
+print(list)
+
+# 'monday' को लिस्ट के अंत में जोड़ें
+list.append('monday')
+print(list)  # अपडेट की गई लिस्ट प्रिंट करें
+
+
+# एक नई लिस्ट 'l' बनाई गई है
+l = [4, 22, 56, 78, 8, 0, 1]
+
+# लिस्ट को ascending (छोटे से बड़े) क्रम में sort करें
+l.sort()
+print(l)  # सॉर्ट की गई लिस्ट प्रिंट करें
+
+# लिस्ट को descending (बड़े से छोटे) क्रम में sort करें
+l.sort(reverse=True)
+print(l)  # उल्टे क्रम में सॉर्ट की गई लिस्ट प्रिंट करें
+
+# लिस्ट में मौजूद कुल तत्वों की संख्या प्रिंट करें
+print(len(l))  # लिस्ट की लंबाई
+
+# लिस्ट में 4 की आवृत्ति (count) प्रिंट करें
+print(l.count(4))  # 4 कितनी बार है
+
+# लिस्ट की एक shallow copy बनाएं और उसे 'new_l' में स्टोर करें
+new_l = l.copy()
+print(new_l)  # कॉपी की गई लिस्ट प्रिंट करें
+
+# लिस्ट में index 2 पर 789 जोड़ें
+l.insert(2, 789)
+print(l)  # अपडेट की गई लिस्ट प्रिंट करें
+
+# लिस्ट से पहला '4' हटाएं
+l.remove(4)
+print(l)  # अपडेट की गई लिस्ट प्रिंट करें
+
+# लिस्ट को पूरी तरह से खाली करें
+l.clear()
+print(l)  # खाली लिस्ट प्रिंट करें
+
+
+# एक नई लिस्ट 'l2' बनाई गई है
+l2 = [3, 6, 8, 9, 0]
+
+# लिस्ट को उलटें (reverse करें)
+l2.reverse()
+print(l2)  # उलटी हुई लिस्ट प्रिंट करें
+
+# index 3 का तत्व लिस्ट से पॉप करें (निकालें) और उसे 'removed' में स्टोर करें
+removed = l2.pop(3)
+print(l2)  # पॉप के बाद की लिस्ट
+print(removed)  # पॉप किया गया तत्व प्रिंट करें
+
+# लिस्ट में [4, 4, 4] के नए तत्व जोड़ें
+l2.extend([4, 4, 4])
+print(l2)  # अपडेट की गई लिस्ट प्रिंट करें
