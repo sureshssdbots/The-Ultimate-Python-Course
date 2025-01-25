@@ -1,19 +1,11 @@
-a = int(input("Enter your age: "))
+try:
+    a = int(input("Enter your age: "))  # यूज़र से उम्र इनपुट लें और उसे integer में कन्वर्ट करें
 
-# If elif else ladder
-if(a>=18):
-    print("You are above the age of consent")
-    print("Good for you")
+    if a >= 18:  # अगर उम्र 18 या उससे अधिक है
+        print("You are eligible for voting.")  # वोटिंग के लिए योग्य
+    else:  # अगर उम्र 18 से कम है
+        print("You are not eligible for voting. Wait", 18 - a, "year(s).")  # वोटिंग के लिए इंतजार
 
-elif(a<0):
-    print("You are entering an invalid negative age")
-
-elif(a==0):
-    print("You are entering 0 which is not a valid age")    
-
-else:
-    print("You are below the age of consent")
-
-
-print("End of Program")
+except ValueError:  # अगर यूज़र ने गलत डेटा इनपुट किया (जैसे अक्षर)
+    print("Please enter a valid number for age.")  # एरर मैसेज प्रिंट करें)
 
