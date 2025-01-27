@@ -1,0 +1,11 @@
+import math
+
+def trigonometric_calculator():
+    angle = float(input("Enter an angle in degrees: "))
+    radian = math.radians(angle)
+
+    print(f"Sine of {angle}°: {math.sin(radian):.2f}")
+    print(f"Cosine of {angle}°: {math.cos(radian):.2f}")
+    print(f"Tangent of {angle}°: {math.tan(radian):.2f}")
+
+trigonometric_calculator()
